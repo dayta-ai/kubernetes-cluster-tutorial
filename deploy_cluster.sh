@@ -2,11 +2,8 @@
 GREEN='\033[0;32m'
 NC='\033[0;0m'
 export PATH=$PATH:$(pwd)
-export STAGE={your-stage} # e.g. development, stable, etc.
-export DNS_ZONE={your-dns-zone} # e.g. example.com
 export DNS_ZONE_DASH=$(echo $DNS_ZONE | sed 's/\./-/g')
 export S3_BUCKET_PREFIX=$STAGE-$DNS_ZONE_DASH
-export REGION={your-region} # e.g. us-east-1
 export NAME=$STAGE.$DNS_ZONE
 export ORIGINAL_AWS_PROFILE={your-original-aws-profile}
 
