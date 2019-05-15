@@ -5,7 +5,6 @@ export PATH=$PATH:$(pwd)
 export DNS_ZONE_DASH=$(echo $DNS_ZONE | sed 's/\./-/g')
 export S3_BUCKET_PREFIX=$STAGE-$DNS_ZONE_DASH
 export NAME=$STAGE.$DNS_ZONE
-export ORIGINAL_AWS_PROFILE={your-original-aws-profile}
 
 echo -e "${GREEN}==== Initializing Pre-requisite Terraform ====${NC}"
 export KOPS_STATE_STORE=$S3_BUCKET_PREFIX-kstate
